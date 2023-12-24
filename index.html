@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link href="CSS/style.css" rel="stylesheet">
+<script src="JavaScript/script.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Font+Name&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Your+Nice+Font&display=swap">
+
+<!-- Ensure jQuery is included before the Bootstrap JS -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+
+
+<script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
+  <!-- Other stylesheets or scripts -->
+  <!-- Other stylesheets or scripts -->
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md " id="Brand">
+ <img src = "LogoImages/logo.jpeg" id="logo"><h4> Travel <br> <span class="small-text">Sphere</span></h4>
+
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#book-section">Book</a>
+      </li>
+      <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Packages
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">India</a>                   
+                    <a class="dropdown-item" href="#">United States</a>
+                    <a class="dropdown-item" href="#">France</a>
+                    <a class="dropdown-item" href="#">Germany</a>
+                    <a class="dropdown-item" href="#">Italy</a>
+                    <a class="dropdown-item" href="#">Japan</a>
+                    <a class="dropdown-item" href="#">Australia</a>
+                    <a class="dropdown-item" href="#">Thailand</a>
+                    <a class="dropdown-item" href="#">Singapore</a>
+                </div>
+            </li>
+        <li class="nav-item">
+        <a class="nav-link" href="#services-section">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Gallery</a>
+    </li>
+         <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+    </li>
+    </ul>
+    <!-- Add this code to your index.html within the body tag -->
+<!-- Modal for Registration -->
+<div class="modal fade" id="registrationModal" tabindex="-1" role="dialog" aria-labelledby="registrationModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="registrationModalLabel">Sign Up</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Registration Form -->
+        <form id="registrationForm">
+          <div class="form-group">
+            <label for="fullname">Fullname</label>
+            <input type="text" class="form-control" id="fullname" placeholder="Enter your fullname" required>
+          </div>
+          <div class="form-group">
+            <label for="contact">Contact</label>
+            <input type="text" class="form-control" id="contact" placeholder="Enter your contact number" required>
+          </div>
+          <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" class="form-control" id="dob" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email ID</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+          </div>
+          <div class="form-group">
+            <label for="gender">Gender</label>
+            <select class="form-control" id="gender" required>
+              <option value="" disabled selected>Select your gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Register</button> 
+        </form>
+        <!-- End of Registration Form -->
+        <p class="mt-3">Already registered? <a href="#" data-toggle="modal" data-target="#loginModal">Login</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal for Login -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Login</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Login Form -->
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="loginEmail">Email ID</label>
+            <input type="email" class="form-control" id="loginEmail" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <input type="password" class="form-control" id="loginPassword" placeholder="Enter your password" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+        <!-- End of Login Form -->
+        <p class="mt-3">Not registered yet? <a href="#" data-toggle="modal" data-target="#registrationModal">Register</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+   <div class="button-container ml-auto">
+        <a class="btn btn-light btn-login" href="#" data-toggle="modal" data-target="#loginModal">Login</a>
+         <a class="btn btn-light btn-register" href="#" data-toggle="modal" data-target="#registrationModal">Register</a>
+    </div>
+
+    <div class="custom-search-form d-flex">
+        <input class="form-control me-2" type="text" placeholder="Search">
+        <button class="btn btn-primary" type="button">Search</button>
+    </div>
+
+</nav>
+
+ <div class="background-image">
+    <div class="content">
+        <div class="text-container">
+            <h5>Welcome To World</h5>
+            <h1>Visit <span class="changecontent"></span></h1>
+        </div class="container">
+          <a href="#book-section" class="btn-link">
+        <button id="bookNow">Book Now</button>
+      </a>
+    </div>
+</div>
+
+<!-- Section Book section Start -->
+    <section class="book" id="book-section">
+      <div class="container">
+        <div class="main-text">
+          <h1><span>B</span>ook</h1>
+        </div>
+        
+        <div class="row">
+          <div class="col-md-6 py-3 py-md-0">
+            <div class="card">
+             <img src="./FreeImages/AboutUs2.jpg" alt="" class="card-img">
+            </div>
+          </div>
+          <div class="col-md-6 py-3 py-md-0">
+            <form id="bookForm" action="#">
+              <select class="form-control" required>
+        <option value="" selected disabled hidden>Where To</option>
+        <option value="India" href="#">India</option>
+        <option value="United States" href="#">United States</option>
+        <option value="France" href="#">France</option>
+        <option value="Germany" href="#">Germany</option>
+        <option value="Germany" href="#">Italy</option>
+        <option value="Germany" href="#">Japan</option>
+        <option value="Germany" href="#">Australia</option>
+        <option value="Germany" href="#">Thailand</option>
+        <option value="Germany" href="#">Singapore</option>
+      </select><br>
+              <input type="text" class="form-control" placeholder="How Many" required><br>
+              <input type="date" class="form-control" placeholder="Arrivals" required><br>
+              <input type="date" class="form-control" placeholder="Leaving" required><br>
+              <textarea class="form-control" rows="5" name="text" placeholder="Enter Your Name & Details"></textarea>
+               <input type="button" value="Book Now" class="submit" onclick="validateForm()" required>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Book End -->
+
+       <!-- Section Packages Start -->
+    <section class="packages" id="packages-section">
+      <div class="container">
+        
+        <div class="main-txt">
+          <h1><span>P</span>ackages</h1>
+        </div>
+
+        <div class="row" style="margin-top: 30px;">
+
+          <div class="col-md-4 py-3 py-md-0">
+
+            <div class="card">
+              <img src="./FreeImages/IndiaT.jpg" alt="">
+              <div class="card-body">
+                <h3>India</h3>
+                <p>Diverse, culturally rich, and home to the iconic Taj Mahal and vibrant festivals.</p>
+
+                          <div class="star">
+        <i class="fas fa-star checked"></i>
+        <i class="fas fa-star checked"></i>
+        <i class="fas fa-star checked"></i>
+        <i class="fas fa-star checked"></i>
+        <i class="fas fa-star checked"></i>
+      </div>
+            
+                <h6>Price: <strong>$600</strong></h6>
+                <a href="#book-section">Book Now</a>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+
+            <div class="card">
+              <img src="./FreeImages/us.png" alt="">
+              <div class="card-body">
+                <h3>United States</h3>
+                <p>Diverse landscapes, bustling cities, and iconic landmarks like the Statue of Liberty.</p>
+                          <div class="star">
+        <i class="fas fa-star checked"></i>
+        <i class="fas fa-star checked"></i>
+        <i class="fas fa-star checked"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+      </div>
+            
+                <h6>Price: <strong>$550</strong></h6>
+                <a href="#book-section">Book Now</a>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+
+            <div class="card">
+              <img src="./FreeImages/FranceT.jpg" alt="">
+              <div class="card-body">
+                <h3>France</h3>
+                 <p>Romantic ambiance, exquisite cuisine, and iconic landmarks such as the Eiffel Tower.</p>
+
+                          <div class="star">
+        <i class="fas fa-star checked"></i>
+        <i class="fas fa-star checked"></i>
+        <i class="fas fa-star checked"></i>
+        <i class="fas fa-star checked"></i>
+        <i class="fas fa-star"></i>
+      </div>
+            
+                <h6>Price: <strong>$490</strong></h6>
+                <a href="#book-section">Book Now</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row" style="margin-top: 30px;">
+
+          <div class="col-md-4 py-3 py-md-0">
+
+            <div class="card">
+              <img src="./FreeImages/Berlin.jpg" alt="">
+              <div class="card-body">
+                <h3>Germany</h3>
+                <p>Rich history, cultural heritage, and charming cities like Berlin and Munich.</p>
+
+                          <div class="star">
+        <i class="fas fa-star checked"></i>
+        <i class="fas fa-star checked"></i>
+        <i class="fas fa-star checked"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+      </div>
+            
+                <h6>Price: <strong>$550</strong></h6>
+                <a href="#book-section">Book Now</a>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+
+            <div class="card">
+              <img src="./FreeImages/ItalyT.jpg" alt="">
+              <div class="card-body">
+                <h3>Italy</h3>
+                <p>Delicious cuisine, ancient history, and iconic landmarks like the Colosseum and Venice.</p>
+
+                          <div class="star">
+        <i class="fas fa-star checked"></i>
+        <i class="fas fa-star checked"></i>
+        <i class="fas fa-star checked"></i>
+        <i class="fas fa-star checked"></i>
+        <i class="fas fa-star"></i>
+      </div>
+            
+                <h6>Price: <strong>$580</strong></h6>
+                <a href="#book-section">Book Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 py-3 py-md-0">
+
+            <div class="card">
+              <img src="./FreeImages/JapanT.jpg" alt="">
+              <div class="card-body">
+                <h3>Japan</h3>
+                <p>Blending tradition,Unique culture, beautiful landscapes, and technological innovation.</p>
+          <div class="star">
+        <i class="fas fa-star checked"></i>
+        <i class="fas fa-star checked"></i>
+        <i class="fas fa-star checked"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+      </div>
+            
+                <h6>Price: <strong>$560</strong></h6>
+                <a href="#book-section">Book Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="row" style="margin-top: 30px;">
+
+          <div class="col-md-4 py-3 py-md-0">
+
+            <div class="card">
+              <img src="./FreeImages/AustraliaT.jpg" alt="">
+              <div class="card-body">
+                <h3>Australia</h3>
+               <p>Natural wonders, diverse wildlife, and vibrant cities like Sydney and Melbourne.</p>
+
+
+                          <div class="star">
+        <i class="fas fa-star checked"></i>
+        <i class="fas fa-star checked"></i>
+        <i class="fas fa-star checked"></i>
+        <i class="fas fa-star checked"></i>
+        <i class="fas fa-star"></i>
+      </div>
+            
+                <h6>Price: <strong>$570</strong></h6>
+                <a href="#book-section">Book Now</a>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+
+            <div class="card">
+              <img src="./FreeImages/ThailandT.jpg" alt="">
+              <div class="card-body">
+                <h3>Thailand</h3>
+               <p>Vibrant culture, beautiful beaches, ornate temples, and bustling markets.</p>
+
+                 <div class="star">
+        <i class="fas fa-star checked"></i>
+        <i class="fas fa-star checked"></i>
+        <i class="fas fa-star checked"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+      </div>
+                <h6>Price: <strong>$550</strong></h6>
+                <a href="#book-section">Book Now</a>
+              </div>
+            </div>
+          </div>
+       
+
+        <div class="col-md-4 py-3 py-md-0">
+
+            <div class="card">
+              <img src="./FreeImages/SingaporeT.jpg" alt="">
+              <div class="card-body">
+                <h3>Singapore</h3>
+               <p>Modern city with futuristic architecture and a stunning skyline highlighted by Marina Bay.</p>
+                         <div class="star">
+        <i class="fas fa-star checked"></i>
+        <i class="fas fa-star checked"></i>
+        <i class="fas fa-star checked"></i>
+        <i class="fas fa-star checked"></i>
+        <i class="fas fa-star"></i>
+      </div>
+            
+                <h6>Price: <strong>$500</strong></h6>
+                <a href="#book-section">Book Now</a>
+              </div>
+            </div>
+          </div>
+          </div>
+
+    </section>
+    <!-- Section Packages End -->
+
+    <!-- Section Services Start -->
+    <section class="services" id="services-section">
+      <div class="container">
+
+        <div class="main-txt">
+          <h1><span>S</span>ervices</h1>
+        </div>
+
+        <div class="row" style="margin-top: 30px;">
+
+          <div class="col-md-4 py-3 py-md-0">
+
+            <div class="card">
+              <i class="fas fa-building"></i>
+              <div class="card-body">
+                <h3>Affordable Hotel</h3>
+                <p>Budget-friendly accommodation for a quality stay at a great price.</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+
+            <div class="card">
+              <i class="fas fa-glass-martini"></i>
+              <div class="card-body">
+                <h3>Food & Drinks</h3>
+                <p>Varied culinary options and beverages for diverse tastes and preferences.</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+
+            <div class="card">
+            <i class="fas fa-shield-alt"></i>
+              <div class="card-body">
+                <h3>Safty Guide</h3>
+                <p>Varied culinary options and beverages for diverse tastes and preferences.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row" style="margin-top: 30px;">
+
+          <div class="col-md-4 py-3 py-md-0">
+
+            <div class="card">
+               <i class="fas fa-hiking"></i>
+              <div class="card-body">
+                <h3>Adventure Activities</h3>
+                <p>Thrilling excursions andExciting outdoor experiences for thrill-seekers.</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+
+            <div class="card">
+             <i class="fas fa-map"></i>
+              <div class="card-body">
+                <h3>Local Tours</h3>
+                <p>Guided exploration of nearby attractions, providing immersive experiences.</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-4 py-3 py-md-0">
+
+            <div class="card">
+              <i class="fas fa-spa"></i>
+              <div class="card-body">
+                <h3>Wellness & Spa</h3>
+                <p>Relaxing treatments to revitalize your body and mind for a rejuvenating experience.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Services End --> 
+
+    <!-- Section Gallary Start -->
+ <section class="gallery" id="gallery">
+  <div class="container">
+    <div class="main-txt">
+      <h1><span>G</span>allery</h1>
+    </div>
+
+    <div class="gallery-cards row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="./FreeImages/IndiaG1.jpg" alt="" class="gallery-img">
+          <div class="img-caption">India: A vibrant fusion of history, flavors, and diverse culture, from the iconic Taj Mahal to bustling streets</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="./FreeImages/USG2.jpg" alt="" class="gallery-img">
+          <div class="img-caption">The US: Offers a diverse experience, scenic wonders, and bustling cities, providing a vibrant fusion of history and modern allure.</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="./FreeImages/FranceG.jpg" alt="" class="gallery-img">
+          <div class="img-caption">France: An immersive experience in art, Serene delights from iconic landmarks to charming streets, with history and romance.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second row -->
+    <div class="gallery-cards row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="./FreeImages/GermanyG.jpg" alt="" class="gallery-img">
+          <div class="img-caption">Germany: A blend of rich history and modern vibrancy, boasting picturesque landscapes and captivating cultural experiences.</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="./FreeImages/ItalyG1.jpg" alt="" class="gallery-img">
+          <div class="img-caption">Italy: A journey through ancient history, exquisite art, and culinary delights, amid breathtaking landscapes and timeless charm.</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="./FreeImages/JapanG.jpg" alt="" class="gallery-img">
+          <div class="img-caption">Japan: A harmonious fusion of tradition and innovation, offering serene landscapes, rich heritage, and cutting-edge technology.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third row -->
+    <div class="gallery-cards row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="./FreeImages/AustraliaG.jpg" alt="" class="gallery-img">
+          <div class="img-caption">Australia: A land of stunning contrasts, from its diverse wildlife and natural wonders to vibrant cities and laid-back coastal lifestyle.</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="./FreeImages/ThailandG.jpg" alt="" class="gallery-img">
+          <div class="img-caption">Thailand: A cultural treasure trove, showcasing ornate temples, flavorful cuisine, and warm hospitality amid tropical landscapes.</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="./FreeImages/SingaporeG.jpg" alt="" class="gallery-img">
+          <div class="img-caption">Singapore: A modern marvel blending diverse cultures, futuristic architecture, culinary delights, and vibrant city life.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Section Gallary End -->
+<section class="about" id="about">
+  <div class="container">
+
+    <div class="main-txt">
+      <h1>About <span>Us</span></h1>
+
+    </div>
+
+    <div class="row" style="margin-top: 50px;">
+
+      <div class="col-md-6 py-3 py-md-0">
+        <!-- Image related to brand or company -->
+        <div class="brand-image">
+          <img src="./FreeImages/AboutUs1.jpg" alt="Company Image">
+        </div>
+      </div>
+
+      <div class="col-md-6 py-3 py-md-0">
+        <!-- Company information -->
+        <div class="company-details">
+          <h2>About Our Company</h2>
+          <p>Travel Sphere, established in <strong>2023</strong>, By Prerana Nimbalkar has been a leading figure in providing exceptional travel experiences globally. Our mission is to ensure every journey with us is seamless, memorable, and enriched with the spirit of exploration. We offer a wide range of packages to help people achieve their travelling dreams. We are committed to providing high quality services and friendly experience altogether and create unforgettable memories for our clients.</p>
+          <p><strong>Location</strong>: Bangalore, India</p>
+          <p><strong>Email</strong>: travelsphere@gmail.com</p>
+          <p><strong>Phone</strong>: +91 9526728292</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer Start -->
+    <footer id="footer">
+      <h1>Travel <span>Sphere</span></h1>
+      <p>Welcome to the world of discovery and adventure. Experience moments that define a lifetime.</p>
+      <div class="social-links">
+  <i class="fab fa-twitter"></i>
+  <i class="fab fa-facebook"></i>
+  <i class="fab fa-instagram"></i>
+  <i class="fab fa-youtube"></i>
+  <i class="fab fa-pinterest"></i>
+</div>
+      <div class="credit">
+        <p>Designed By <a href="#">Prerana Coding</a></p>
+      </div>
+      <div class="copyright">
+        <p>&copy;Copyright Prerana Coding. All Rights Reserved</p>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+</body>
+</html>
